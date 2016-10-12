@@ -19,7 +19,7 @@ Setting up
 
 3) **cd** into the directory and install all the dependencies to the project directory
 
-    cd services && pip install -r requirements.txt
+    cd services && pip install -r requirements.txt -t ./
 
 4) Create an AWS account and configure your system. Use this [guide](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
