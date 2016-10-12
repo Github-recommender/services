@@ -87,3 +87,30 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+
+#modules
+boto3
+docutils-0.12.dist-info
+boto3-1.4.1.dist-info
+futures-3.0.5.dist-info
+python_dateutil-2.5.3.dist-info
+six-1.10.0.dist-info
+botocore
+github3
+requests
+six.py
+botocore-1.4.60.dist-info
+github3.py-0.9.6.dist-info
+requests-2.11.1.dist-info
+six.pyc
+concurrent
+uritemplate
+dateutil
+jmespath
+s3transfer
+uritemplate-3.0.0.dist-info
+docutils
+jmespath-0.9.0.dist-info    
+s3transfer-0.1.7.dist-info
+uritemplate.py-3.0.2.dist-info
