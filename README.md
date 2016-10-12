@@ -12,6 +12,8 @@ Setting up
 1) Install serverless
 
     npm install -g serverless
+    
+    >Note: Install npm: ```sudo apt install npm```
  
 2) Clone this repository 
 
