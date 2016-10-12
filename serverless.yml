@@ -16,10 +16,44 @@ service: github-recommender-service # NOTE: update this with your service name
 provider:
   name: aws
   runtime: python2.7
-
-# you can overwrite defaults here
   stage: dev
   region: ap-southeast-1
+
+
+resources:
+  Resources:
+    DynamoDbTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: GRUsers
+        AttributeDefinitions:
+          - AttributeName: username
+            AttributeType: S
+        KeySchema:
+          - AttributeName: username
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+    DynamoDBIamPolicy:
+      Type: AWS::IAM::Policy
+      DependsOn: DynamoDbTable
+      Properties:
+        PolicyName: lambda-dynamodb
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:GetItem
+                - dynamodb:PutItem
+                - dynamodb:Query
+              Resource: arn:aws:dynamodb:ap-southeast-1:771863450668:table/GRUsers
+        Roles:
+          - Ref: IamRoleLambdaExecution
+
+#Resource: "arn:aws:dynamodb:ap-southeast-1:771863450668:table/GRUsers"
+
 
 
 functions:
