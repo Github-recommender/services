@@ -21,8 +21,10 @@ Setting up
 
     cd services && pip install -r requirements.txt -t ./
 
-4) Create an AWS account and configure your system. Use this [guide](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+4) Create an AWS account.
 
-5) Deploy the service
+5) Configure your system. Use this [guide](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+
+6) Deploy the service
 
     serverless deploy
