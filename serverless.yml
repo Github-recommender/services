@@ -58,7 +58,7 @@ resources:
 
 functions:
   newUser:
-    handler: handler.newUser
+    handler: newUser.newUser
     events:
       - http:
           path: newUser/{username}
@@ -66,3 +66,10 @@ functions:
           request:
             template:
               application/json: '{ "username" : "$input.params(''username'')"}'
+
+  generateRecommendations:
+    handler: generateRecommendations.generateRecommendations
+    events:
+      - stream:
+          arn: arn:aws:dynamodb:ap-southeast-1:771863450668:table/GRUsers/stream/2016-10-31T06:19:28.969
+          batchSize: 1

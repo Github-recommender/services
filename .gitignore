@@ -111,6 +111,13 @@ jmespath
 s3transfer
 uritemplate-3.0.0.dist-info
 docutils
-jmespath-0.9.0.dist-info    
+jmespath-0.9.0.dist-info
 s3transfer-0.1.7.dist-info
 uritemplate.py-3.0.2.dist-info
+botocore-1.4.67.dist-info/
+s3transfer-0.1.9.dist-info/
+
+
+
+#Credentials
+creds.py

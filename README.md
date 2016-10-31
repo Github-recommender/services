@@ -12,16 +12,16 @@ Setting up
 1) Install serverless
 
     npm install -g serverless
-    
+
     Note: Install npm: sudo apt install npm
- 
-2) Clone this repository 
+
+2) Clone this repository
 
     git clone https://github.com/Github-recommender/services.git
 
 3) **cd** into the directory and install all the dependencies to the project directory
 
-    cd services && pip install -r requirements.txt -t ./
+    cd services && pip2 install -r requirements.txt -t ./
 
 4) Create an AWS account.
 
