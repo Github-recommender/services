@@ -1,7 +1,7 @@
 from github3 import login
 import boto3, json, decimal
 from boto3.dynamodb.conditions import Key, Attr
-from creds import username, password
+from creds import usrnm, pwd
 
 # Helper class to convert a DynamoDB item to JSON.
 class DecimalEncoder(json.JSONEncoder):
@@ -26,7 +26,7 @@ def newUser(event, context):
     returnValue = username+'; '
 
 
-    gr = login(username, password=password)
+    gr = login(usrnm, password=pwd)
     user = gr.user(username)
     if user:
         response = usersTable.get_item(Key={'username':username})
